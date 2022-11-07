@@ -1,0 +1,20 @@
+import hashlib
+
+class dataBlock:
+  def _init_(self, previous_block_hash,transaction_list):
+  self.previous_block_hash = previous_block_hash
+  self.transaction_list = transaction_list
+  self.block_data = " ".join(transaction_list) + " " + previous_block_hash
+  self.block_hash = hashlib.sha256(self.blockdata.encode()).hexdigest()
+#print(hashlib.sha256('Sold at the shop A'. encode()).hexdigest())
+  
+  t_list1 "Sold at the shop A"
+  t_list2 = "Sold by shop A and bought by Mr. B"
+  t_list3 - "Sold by shop B and bought by Mr. C"
+  t_list4 = "Sold by shop D and bought by Mr. E"
+  
+  first_block = dataBlock("First Block",[t_list1,t_list2])
+  second_block=dataBlock(first_block.block_hash,[t_list3,t_list4])
+  print(second_block.block_data)
+  print(second_block.block_hash)
+
